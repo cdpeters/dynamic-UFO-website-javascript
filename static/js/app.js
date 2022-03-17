@@ -34,7 +34,7 @@ function handleClick() {
     buildTable(filteredData);
 }
 
-// Set up event listener
+// Set up event listener.
 d3.selectAll("#filter-btn").on("click", handleClick);
 
 // Build initial table.
