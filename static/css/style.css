@@ -1,0 +1,48 @@
+body {
+    color: #f7f7f7;
+}
+
+input {
+    max-width: 450px;
+}
+
+nav {
+    border-bottom: 1px solid #6c757d;
+}
+
+form {
+    max-width: 218px;
+}
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+#jumbotron {
+    background-image: url("../images/nasa.jpg");
+    /* background-size: 100% 100%; */
+    background-position: 100% 42%;
+    background-size: cover;
+    text-align: center;
+    margin-top: 56px;
+    border-bottom: 1px solid #6c757d;
+}
+
+#jumbotron-title {
+    font-weight: 350;
+}
+
+#filter-date,
+#filter-city,
+#filter-state,
+#filter-country,
+#filter-shape {
+    border-style: none;
+    color: #f7f7f7;
+}
+
+#filter-title {
+    border-style: none;
+    color: #f7f7f7;
+}
