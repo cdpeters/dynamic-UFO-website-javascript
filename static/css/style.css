@@ -2,10 +2,6 @@ body {
     color: #f7f7f7;
 }
 
-input {
-    max-width: 450px;
-}
-
 nav {
     border-bottom: 1px solid #6c757d;
 }
@@ -21,7 +17,6 @@ p {
 
 #jumbotron {
     background-image: url("../images/nasa.jpg");
-    /* background-size: 100% 100%; */
     background-position: 100% 42%;
     background-size: cover;
     text-align: center;
