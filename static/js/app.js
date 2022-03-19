@@ -5,6 +5,7 @@ const tableData = data;
 let tbody = d3.select("tbody");
 
 function buildTable(data) {
+    /* Build table one row at a time from `data` (an array of objects).*/
     // First, clear out any existing data.
     tbody.html("");
     // Next, loop through each object in the data and append a row and cells for
@@ -26,7 +27,7 @@ let filters = {};
 
 // 3. Use this function to update the filters.
 function updateFilters() {
-
+    /* Update `filters` object based on filter search form user input.*/
     // 4a. Save the element that was changed as a variable.
     selection = d3.select(this);
     // 4b. Save the value that was changed as a variable.
@@ -43,27 +44,27 @@ function updateFilters() {
         delete filters[id]
     };
 
-    // 6. Call function to apply all filters and rebuild the table
+    // 6. Call function to apply all filters and rebuild the table.
     filterTable();
 }
 
 // 7. Use this function to filter the table when data is entered.
 function filterTable() {
-
+    /* Apply the filters in the `filters` object to the data array.*/
     // 8. Set the filtered data to the tableData.
     let filteredData = tableData;
 
     // 9. Loop through all of the filters and keep any data that
-    // matches the filter values
+    // matches the filter values.
     Object.entries(filters).forEach(([id, value]) => {
         filteredData = filteredData.filter((row) => row[id] === value);
     });
 
-    // 10. Finally, rebuild the table using the filtered data
+    // 10. Finally, rebuild the table using the filtered data.
     buildTable(filteredData);
 }
 
-// 2. Attach an event to listen for changes to each filter
+// 2. Attach an event to listen for changes to each filter.
 d3.selectAll("input").on("change", updateFilters);
 
 // Build initial table.
