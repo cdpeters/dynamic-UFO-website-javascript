@@ -41,3 +41,18 @@ p {
     border-style: none;
     color: #f7f7f7;
 }
+
+.form-control::placeholder {
+    color: #6c757d86;
+    opacity: 1;
+}
+
+.form-control {
+    border-color: #6c757d;
+    border-width: 2px;
+}
+
+.form-control:focus {
+    border-color: #ffd797;
+    border-width: 2px;
+}
